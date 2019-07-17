@@ -22,7 +22,7 @@ npm install
 npm start
 ```
 
-The server will run on port 3000. You can change this by editing `config.dev.js` file.
+The server will run on port 3001. You can change this by editing `config.dev.js` file.
 
 # Build Docker image
 
