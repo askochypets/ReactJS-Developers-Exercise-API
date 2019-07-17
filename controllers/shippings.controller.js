@@ -25,10 +25,20 @@ export default {
     try {
       const result = await Shipping.addShipping(shippingToAdd);
       console.info('Adding shipping...');
-      res.send(`added: ${result}`);
+      res.json(result);
     } catch (err) {
-      console.error(`Error in getting shippings- ${err}`);
+      console.error(`Error in adding shippings- ${err}`);
       res.send('Got error in addShipping');
+    }
+  },
+
+  deleteAllShippings: async (req, res) => {
+    try {
+      const result = await Shipping.deleteAll();
+      res.send(result);
+    } catch (err) {
+      console.error(`Error in deleting shippings- ${err}`);
+      res.send('Got error in deleteAllShippings');
     }
   },
 };

@@ -6,7 +6,7 @@ const ShippingSchema = mongoose.Schema(
     lastName: { type: String, required: true },
     address: { type: String, required: true },
     city: { type: String, required: true },
-    email: { type: String, unique: true, required: true },
+    email: { type: String, required: true },
     phone: { type: String, required: true },
     notes: { type: String },
   },
@@ -21,6 +21,10 @@ ShippingsModel.getAll = () => {
 
 ShippingsModel.addShipping = (shippingToAdd) => {
   return shippingToAdd.save();
+};
+
+ShippingsModel.deleteAll = () => {
+  return ShippingsModel.remove({});
 };
 
 export default ShippingsModel;
