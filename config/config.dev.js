@@ -1,7 +1,5 @@
 export default {
-  dbHost: process.env.dbHost || 'localhost',
-  dbPort: process.env.dbPort || '27017',
-  dbName: process.env.dbName || 'Shippingdb',
+  MONGO_URI: 'mongodb://localhost:27017/Shippingdb',
   serverPort: process.env.serverPort || 3001,
   YAddress_BASE_URL: 'http://www.yaddress.net/api/address',
 };
