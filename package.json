@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Basic NodeJS REST API that writes objects to a mongo db and connect with a third-party service",
   "scripts": {
-    "start": "nodemon ./server.js --exec babel-node",
+    "dev": "nodemon ./server.js --exec babel-node",
+    "start": "node dist/server.js",
     "build": "babel . -d dist --presets es2015,stage-2 --ignore spec.js,node_modules",
-    "serve": "node dist/server.js",
     "start_babel": "babel-node ./server.js --preset=babel-preset-es2015",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ."
