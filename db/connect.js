@@ -6,7 +6,6 @@ Mongoose.Promise = global.Promise;
 const connectToDb = async () => {
   const { MONGO_URI } = config;
   try {
-    console.log('---------------------------', MONGO_URI);
     await Mongoose.connect(MONGO_URI, { useNewUrlParser: true });
     console.info('Connected to mongo!!!');
   } catch (err) {
